@@ -1,107 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Yaiza Louzan, Apprentie en Informatique.">
     <title>Portfolio - Yaiza Louzan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fce4ec;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
+
         header {
-            background-color: #4CAF50;
+            background-color: #27192a;
             color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        section {
-            max-width: 900px;
-            margin: 20px auto;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .contact {
             text-align: center;
+        }
+
+        h1, h2 {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            color: #460821;
+        }
+
+        p {
+            color: #000000;
+        }
+
+        .contact {
+            background-color: #bd9da5;
+            padding: 10px;
+            border-radius: 8px;
             margin-bottom: 20px;
         }
-        .contact a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
+
         footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
+            background-color: #27192a;
             color: white;
-            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
         }
+
+        .contact-info {
+            margin: 0;
+        }
+
+        .project-item {
+            background-color: #fce4ec;
+            padding: 15px;
+            border: 1px solid #7581ad;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
     </style>
 </head>
-<body>
 
+<body>
 <header>
-    <h1>Yaiza Louzan - Apprentie en Informatique</h1>
+    <h1>Yaiza Louzan</h1>
+    <h2>Apprentie en Informatique</h2>
 </header>
 
-<section>
-    <div class="contact">
-        <p><strong>Localisation :</strong> Delémont, JU</p>
-        <p><strong>Email :</strong> <a href="mailto:yaizalouzan@gmail.com">yaizalouzan@gmail.com</a></p>
-    </div>
+<div class="container">
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="contact">
+            <h3>Contact</h3>
+            <p class="contact-info">Delémont, JU<br>
+                yaizalouzan@gmail.com</p>
+        </div>
+    </section>
 
-    <h2>Profil</h2>
-    <p>Apprentie en informatique avec une solide formation à l'École des Métiers Techniques de Porrentruy. Passionnée par les nouvelles technologies et toujours à la recherche de nouvelles opportunités pour développer mes compétences en informatique.</p>
+    <!-- Profil Section -->
+    <section class="section">
+        <h3>Profil</h3>
+        <p>Je suis une apprentie en informatique en 2ème année à l'EMT de Porrentruy. passionnée avec des expériences variées dans le domaine de la technologie et un très bon niveau dans plusieurs langues (français, espagnol, anglais). Je cherche constamment à améliorer mes compétences techniques et à contribuer à des projets innovants.</p>
+    </section>
 
-    <h2>Compétences linguistiques</h2>
-    <ul>
-        <li><strong>Français :</strong> Langue maternelle</li>
-        <li><strong>Espagnol :</strong> Langue maternelle (Diplôme C3)</li>
-        <li><strong>Anglais :</strong> Connaissances avancées</li>
-    </ul>
+    <!-- Compétences Langues Section -->
+    <section class="section">
+        <h3>Compétences linguistiques</h3>
+        <p>Français : Langue maternelle<br>
+            Espagnol : Langue maternelle (diplômée C3)<br>
+            Anglais : Connaissances avancées</p>
+    </section>
 
-    <h2>Expérience (Stages)</h2>
-    <ul>
-        <li><strong>AZ Informatique - Porrentruy</strong> (Informaticienne) - Juin 2024</li>
-        <li><strong>EMT - Porrentruy</strong> (Automaticienne) - Mai 2022</li>
-        <li><strong>EMT - Porrentruy</strong> (Informaticienne) - Mai 2022</li>
-        <li><strong>EMT - Porrentruy</strong> (Électronicienne) - Avril 2022</li>
-        <li><strong>Crèche les Doudoubs - St-Ursanne</strong> (ASE) - Février 2022</li>
-        <li><strong>Arc-En-Ciel - Courrendlin</strong> (ASE) - Février 2022</li>
-        <li><strong>Les P’tits Musclés - Alle</strong> (ASE) - Novembre 2021</li>
-        <li><strong>Création Romain - Delémont</strong> (Coiffeuse) - Mars 2021</li>
-        <li><strong>Diminu-Tif - Bassecourt</strong> (Coiffeuse) - Février 2021</li>
-        <li><strong>Caméléon - Delémont</strong> (Coiffeuse) - Février 2021</li>
-        <li><strong>Coop - Bassecourt</strong> (Gestionnaire de commerce) - Janvier 2021</li>
-        <li><strong>MParc - Delémont</strong> (Gestionnaire de commerce) - Octobre 2020</li>
-        <li><strong>Garage Rais - Delémont</strong> (Assistante en maintenance d’automobiles) - Mars 2020</li>
-        <li><strong>Pharmacie du Val Terbie - Courroux</strong> (Assistante en pharmacie) - Mars 2020</li>
-    </ul>
+    <!-- Stages Section -->
+    <section class="section">
+        <h3>Stages</h3>
+        <div class="project-item">
+            <p>AZ Informatique - Porrentruy (Informaticienne, juin 2024)</p>
+        </div>
+        <div class="project-item">
+            <p>EMT - Porrentruy (Automaticienne, mai 2022)</p>
+        </div>
+        <div class="project-item">
+            <p>EMT - Porrentruy (Informaticienne, mai 2022)</p>
+        </div>
+        <div class="project-item">
+            <p>EMT - Porrentruy (Électronicienne, avril 2022)</p>
+        </div>
+    </section>
 
-    <h2>Formation</h2>
-    <ul>
-        <li><strong>2022 - Présent :</strong> École des Métiers Techniques - Porrentruy</li>
-        <li><strong>2021-2022 :</strong> Année de transition à l’ECG - Delémont</li>
-        <li><strong>2018-2021 :</strong> Collège de Delémont</li>
-        <li><strong>2014-2018 :</strong> Ecole primaire du Château - Delémont</li>
-        <li><strong>2011-2014 :</strong> Ecole primaire des Traversins - Delémont</li>
-        <li><strong>2008-2011 :</strong> Ecole primaire - Espagne</li>
-    </ul>
-</section>
+    <!-- Scolarité Section -->
+    <section class="section">
+        <h3>Scolarité</h3>
+        <p>2022 - Présent : Ecole des Métiers Techniques - Porrentruy<br>
+            2021-2022 : Année de transition à l’ECG - Delémont<br>
+            2018 - 2021 : Collège de Delémont<br>
+            2014 - 2018 : Ecole primaire des Traversins - Delémont<br>
+            2011 - 2014 : Ecole primaire du Château - Delémont<br>
+            2008 - 2011 : Ecole primaire - Espagne</p>
+    </section>
+</div>
 
 <footer>
-    <p>&copy; 2024 Yaiza Louzan - Portfolio Informatique</p>
+    &copy; 2024 Yaiza Louzan - Portfolio
 </footer>
-
 </body>
+
 </html>
