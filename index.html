@@ -1,214 +1,257 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Yaiza Louzan</title>
-    <!-- Favicon for different devices -->
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="manifest" href="site.webmanifest">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaiza Louzan - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #fce4ec;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
 
-        header {
-            background-color: #27192a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+    }
 
-        h1, h2 {
-            margin: 0;
-            color: #ffffff;
-        }
+    header {
+      background-color: #354550;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    header h1 {
+      font-weight: 600;
+      margin: 0;
+    }
 
-        .section {
-            margin-bottom: 40px;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
 
-        h3 {
-            color: #460821;
-        }
+    nav ul li {
+      font-weight: 300;
+    }
 
-        p {
-            color: #000000;
-        }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-        .contact {
-            background-color: #bd9da5;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+    nav ul li a:hover {
+      color: #d4aeee;
+    }
 
-        .contact i {
-            color: #27192a;
-            font-size: 24px;
-        }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 90vh;
+      background: linear-gradient(to bottom right, #422c50, #e2c6f5);
+      color: white;
+      padding: 20px;
+    }
 
-        footer {
-            background-color: #27192a;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
+    .hero h2 {
+      font-size: 3em;
+      margin: 0 0 10px;
+    }
 
-        .contact-info {
-            margin: 0;
-        }
+    .hero p {
+      font-size: 1.2em;
+      font-weight: 300;
+    }
 
-        .project-item {
-            background-color: #fce4ec;
-            padding: 15px;
-            border: 1px solid #7581ad;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .section {
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        .project-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
+    .section h3 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
 
-        /* Simple Fade-in Animation */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out forwards;
-        }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    .skills div, .projects div {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: white;
+      transition: transform 0.3s;
+    }
+
+    .skills div:hover, .projects div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #354550;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #d1d6ec;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
-
 <body>
-<header class="fade-in">
-    <h1>Yaiza Louzan</h1>
-    <h2>Apprentie en Informatique</h2>
+<header>
+  <h1>Yaiza Louzan</h1>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#scolarite">Stages</a></li>
+      <li><a href="#stages">Scolarité</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<div class="container fade-in">
-    <!-- Contact Section -->
-    <section class="section">
-        <div class="contact">
-            <i class="fas fa-map-marker-alt"></i>
-            <div class="contact-info">
-                <h3>Contact</h3>
-                <p>Delémont, JU<br>
-                    <i class="fas fa-envelope"></i> yaizalouzan@gmail.com
-                </p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+  <h2>Apprentie en informatique en 2ème année</h2>
+  <p>En recherche d'un apprentissage en entreprise</p>
+</section>
 
-    <!-- Profil Section -->
-    <section class="section">
-        <h3>Profil</h3>
-        <p>Je suis une apprentie en informatique en 2ème année à l'EMT de Porrentruy. Passionnée avec des expériences variées dans le domaine de la technologie et un très bon niveau dans plusieurs langues (français, espagnol, anglais). Je cherche constamment à améliorer mes compétences techniques et à contribuer à des projets innovants.</p>
-    </section>
+<section id="about" class="section">
+  <h3>About Me</h3>
+    <p>Je suis une apprentie en informatique en 2ème année à l'EMT de Porrentruy. Passionnée avec des expériences variées dans le domaine de la technologie et un très bon niveau dans plusieurs langues (français, espagnol, anglais). Je cherche constamment à améliorer mes compétences techniques et à contribuer à des projets</p>
 
-    <!-- Compétences Langues Section -->
-    <section class="section">
-        <h3>Compétences linguistiques</h3>
-        <p>Français : Langue maternelle<br>
-            Espagnol : Langue maternelle (diplômée C3)<br>
-            Anglais : Connaissances avancées</p>
-    </section>
+  <!-- Compétences -->
+  <h3>Compétences linguistiques</h3>
+  <p><strong>Français</strong> : Langue maternelle<br>
+    <strong>Espagnol</strong> : Langue maternelle (diplômée C3)<br>
+    <strong>Anglais</strong> : Connaissances avancées</p>
+</section>
 
-    <!-- Scolarité Section -->
-    <section class="section">
-        <h3>Scolarité</h3>
-        <p>2022 - Présent : Ecole des Métiers Techniques - Porrentruy<br>
-            2021-2022 : Année de transition à l’ECG - Delémont<br>
-            2018 - 2021 : Collège de Delémont<br>
-            2014 - 2018 : Ecole primaire des Traversins - Delémont<br>
-            2011 - 2014 : Ecole primaire du Château - Delémont<br>
-            2008 - 2011 : Ecole primaire - Espagne</p>
-    </section>
+<!-- Scolarité -->
+<section id="scolarite" class="section">
+  <h3>Scolarité</h3>
+  <div class="skills">
+    <div>
+      <h4>2022 - Présent</h4>
+      <p>Ecole des Métiers Techniques - Porrentruy</p>
+    </div>
+    <div>
+      <h4>2021-2022</h4>
+      <p>Année de transition à l’ECG - Delémont</p>
+    </div>
+    <div>
+      <h4>2018 - 2021</h4>
+      <p>Collège de Delémont</p>
+    </div>
+    <div>
+      <h4>2014 - 2018</h4>
+      <p>Ecole primaire des Traversins - Delémont</p>
+    </div>
+    <div>
+      <h4>2014 - 2018</h4>
+      <p>Ecole primaire du Château - Delémont</p>
+    </div>
+    <div>
+      <h4>2008 - 2011</h4>
+      <p>Ecole primaire - Espagne</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Stages Section -->
-    <section class="section">
-        <h3>Stages</h3>
-        <div class="project-item">
-            <p>Ebauches Microtechnique Precitrame - Tramelan (Informaticienne, janvier 2025)</p>
-        </div>
-        <div class="project-item">
-            <p>AZ Informatique - Porrentruy (Informaticienne, juin 2024)</p>
-        </div>
-        <div class="project-item">
-            <p>EMT - Porrentruy (Automaticienne, mai 2022)</p>
-        </div>
-        <div class="project-item">
-            <p>EMT - Porrentruy (Informaticienne, mai 2022)</p>
-        </div>
-        <div class="project-item">
-            <p>EMT - Porrentruy (Électronicienne, avril 2022)</p>
-        </div>
-        <div class="project-item">
-            <p>Crèche les Doudoubs - St-Ursanne (ASE, février 2022)</p>
-        </div>
-        <div class="project-item">
-            <p>Arc-En-Ciel - Courrendlin (ASE, février 2022)</p>
-        </div>
-        <div class="project-item">
-            <p>Les P’tits Musclés - Alle (ASE, novembre 2021)</p>
-        </div>
-        <div class="project-item">
-            <p>Création Romain - Delémont (Coiffeuse, mars 2021)</p>
-        </div>
-        <div class="project-item">
-            <p>Diminu-Tif - Bassecourt (Coiffeuse, février 2021)</p>
-        </div>
-        <div class="project-item">
-            <p>Caméléon - Delémont (Coiffeuse, février 2021)</p>
-        </div>
-        <div class="project-item">
-            <p>Coop - Bassecourt (Gestionnaire de commerce, janvier 2021)</p>
-        </div>
-        <div class="project-item">
-            <p>MParc - Delémont (Gestionnaire de commerce, octobre 2020)</p>
-        </div>
-        <div class="project-item">
-            <p>Garage Rais - Delémont (Assistante en maintenance d’automobiles, mars 2020)</p>
-        </div>
-        <div class="project-item">
-            <p>Pharmacie du Val Terbie - Courroux (Assistante en pharmacie, mars 2020)</p>
-        </div>
-    </section>
-</div>
+<section id="stages" class="section">
+  <h3>Stages</h3>
+  <div class="projects">
+    <div>
+      <h4>Ebauches Microtechnique Precitrame</h4>
+      <p>Informaticienne, janvier 2025</p>
+    </div>
+    <div>
+      <h4>AZ Informatique</h4>
+      <p>Informaticienne, juin 2024</p>
+    </div>
+    <div>
+      <h4>École des Métiers Techniques</h4>
+      <p>Automaticienne, mai 2022</p>
+    </div>
+    <div>
+      <h4>École des Métiers Techniques</h4>
+      <p>Informaticienne, mai 2022</p>
+    </div>
+    <div>
+      <h4>École des Métiers Techniques</h4>
+      <p>Électronicienne, avril 2022</p>
+    </div>
+    <div>
+      <h4>Crèche les Doudoubs</h4>
+      <p>ASE, février 2022</p>
+    </div>
+    <div>
+      <h4>Arc-En-Ciel</h4>
+      <p>ASE, février 2022</p>
+    </div>
+    <div>
+      <h4>Les P’tits Musclés</h4>
+      <p>ASE, novembre 2021</p>
+    </div>
+    <div>
+      <h4>Création Romain</h4>
+      <p>Coiffeuse, mars 2021</p>
+    </div>
+    <div>
+      <h4>Diminu-Tif</h4>
+      <p>Coiffeuse, février 2021</p>
+    </div>
+    <div>
+      <h4>Caméléon</h4>
+      <p>Coiffeuse, février 2021</p>
+    </div>
+    <div>
+      <h4>MParc - Melectronics</h4>
+      <p>Gestionnaire de commerce, octobre 2020</p>
+    </div>
+    <div>
+      <h4>Garage Rais</h4>
+      <p>Assistante en maintenance d’automobiles, mars 2020</p>
+    </div>
+    <div>
+      <h4>Pharmacie du Val Terbi</h4>
+      <p>Assistante en pharmacie, mars 2020</p>
+    </div>
+  </div>
+</section>
 
-<footer class="fade-in">
-    &copy; 2024 Yaiza Louzan - Portfolio
+<section id="contact" class="section">
+  <h3>Contact Me</h3>
+  <p>Si ma candidature vous intéresse, vous pouvez toujours me contacter !</p>
+  E-mail: <a href="mailto:yaizalouzan@gmail.com">yaizalouzan@gmail.com</a> <br>
+  Tél. : <a href="tel:+4176 271 13 90">+41 76 271 13 90</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 Yaiza Louzan</p>
+  <p><a href="#">Back to top</a></p>
 </footer>
 </body>
-
 </html>
