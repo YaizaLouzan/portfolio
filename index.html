@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M399 384.2C376.9 345.8 335.4 320 288 320l-64 0c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z'%3E%3C/path%3E%3C/svg%3E" type="image/svg+xml">
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yaiza Louzan - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-
   <style>
+    /* Style général du body */
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       color: #333;
       background-color: #f9f9f9;
+      padding-top: 60px; /* Réduit l'espace pour éviter le "bout de blanc" sous le menu fixe */
     }
 
+    /* Style du header */
     header {
       background-color: #354550;
       color: white;
       padding: 20px 50px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column; /* Les éléments sont empilés (titre + menu) */
+      justify-content: center;
       align-items: center;
+      position: fixed; /* Le menu reste fixe en haut de la page */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Pour que le menu soit toujours au-dessus des autres éléments */
+      margin: 0; /* Enlève toute marge par défaut */
     }
 
+    /* Le titre (h1) du header */
     header h1 {
       font-weight: 600;
       margin: 0;
     }
 
+    /* Style du menu */
     nav ul {
       list-style: none;
       display: flex;
       gap: 20px;
       margin: 0;
       padding: 0;
+      flex-direction: row; /* Les liens sont en ligne par défaut */
     }
 
     nav ul li {
@@ -51,6 +66,71 @@
       color: #d4aeee;
     }
 
+    /* Style du menu pour les grands écrans */
+    @media (min-width: 1024px) {
+      header {
+        flex-direction: row; /* Disposer les éléments en ligne (titre + menu) */
+        justify-content: space-evenly; /* Espacer le titre et le menu */
+        padding: 20px 50px; /* Ajuste les espacements du header */
+      }
+
+      nav ul {
+        justify-content: flex-end; /* Aligne le menu à droite */
+        width: auto; /* Réduit la largeur à celle du contenu */
+      }
+    }
+
+
+    /* Lorsque l'écran est petit, les éléments du menu s'affichent horizontalement sous le titre */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 20px;
+      }
+
+      nav ul {
+        flex-direction: row; /* Les éléments du menu restent horizontaux */
+        gap: 15px;
+        text-align: center;
+        width: 100%; /* Occupe toute la largeur de l'écran */
+        justify-content: center;
+      }
+
+      nav ul li {
+        font-size: 18px; /* Augmente légèrement la taille des textes */
+      }
+    }
+
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #d4aeee;
+    }
+
+    /* Lorsque l'écran est petit, les éléments du menu s'affichent horizontalement sous le titre */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 20px;
+      }
+
+      nav ul {
+        flex-direction: row; /* Les éléments du menu restent horizontaux */
+        gap: 15px;
+        text-align: center;
+        width: 100%; /* Occupe toute la largeur de l'écran */
+        justify-content: center;
+      }
+
+      nav ul li {
+        font-size: 18px; /* Augmente légèrement la taille des textes */
+      }
+    }
+
+    /* Style des sections */
     .hero {
       display: flex;
       flex-direction: column;
@@ -119,6 +199,7 @@
   </style>
 </head>
 <body>
+
 <header>
   <h1>Yaiza Louzan</h1>
 
@@ -259,5 +340,6 @@
   <p>&copy; 2025 Yaiza Louzan</p>
   <p><a href="#">Back to top</a></p>
 </footer>
+
 </body>
 </html>
